@@ -28,7 +28,7 @@ var cognitoUser = userPool.getCurrentUser(); console.log(cognitoUser);
 // };
 
 
-window.onload = function(){ 
+window.onload = function(){  console.log("Window on load..");
     if( cognitoUser != null){
         cognitoUser.getSession( function(err, session) {
              if(err){
