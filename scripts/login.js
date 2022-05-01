@@ -1,4 +1,5 @@
-;console.log("Cookie"); console.log(document.cookie);
+console.log("Cookie"); console.log(document.cookie);
+console.log(COGNITO.USERPOOL_ID);
 function cognitoSignIn(){
     var authenticationData = {
         Username : document.getElementById("username").value,
@@ -6,7 +7,7 @@ function cognitoSignIn(){
     };
     var authenticationDetails = new AmazonCognitoIdentity.AuthenticationDetails(authenticationData);
     
-    var poolData ={};
+    var poolData ={};console.log(COGNITO);
     poolData.UserPoolId = COGNITO.USERPOOL_ID;
     poolData.ClientId = COGNITO.CLIENT_ID;
     var userPool = new AmazonCognitoIdentity.CognitoUserPool(poolData);
