@@ -171,7 +171,7 @@
                         </p>
                         <p class="form-row">
                             <input type="hidden" id="woocommerce-login-nonce" name="woocommerce-login-nonce" value="a414dce984"><input type="hidden" name="_wp_http_referer" value="/my-account/">
-                            <button type="submit" class="woocommerce-button button woocommerce-form-login__submit" name="login" value="Log in">Log in</button>
+                            <button type="button" onclick="cognitoSignIn()" class="woocommerce-button button woocommerce-form-login__submit" name="login" value="Log in">Log in</button>
                             <label class="woocommerce-form__label woocommerce-form__label-for-checkbox woocommerce-form-login__rememberme">
                                 <input class="woocommerce-form__input woocommerce-form__input-checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever"> <span>Remember me</span>
                             </label>
@@ -302,7 +302,14 @@
     <!-- 
     Essential Scripts
     =====================================-->
-    
+    <!--Custom Javascript-->
+    <script src="scripts/config.js"></script>
+    <script src="scripts/core.js"></script>
+    <script src="assets/js/amazon-cognito-auth.js"></script>
+    <script src="assets/js/aws-cognito-sdk.js"></script>
+    <script src="assets/js/amazon-cognito-identity.js"></script>
+    <script src="scripts/login.js"></script>
+
     <!-- Main jQuery -->
     <script src="assets/vendors/jquery/jquery.js"></script>
     <!-- Bootstrap 4.5 -->
